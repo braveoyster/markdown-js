@@ -22,7 +22,7 @@ define(['../markdown_helpers', './dialect_helpers', '../parser'], function (Mark
   var Gruber = {
     block: {
       atxHeader: function atxHeader( block, next ) {
-        var m = block.match( /^(#{1,6})\s*(.*?)\s*#*\s*(?:\n|$)/ );
+        var m = block.match( /^(#{1,6})\s+(.*?)\s*#*\s*(?:\n|$)/ );
 
         if ( !m )
           return undefined;
